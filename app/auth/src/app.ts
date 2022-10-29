@@ -17,7 +17,7 @@ app.use(
     // Desactive encryption
     signed: false,
     // Solo si tiene una conexion a internet https
-    secure: true,
+    secure: process.env.NODE_ENV !== 'test',
   })
 );
 
