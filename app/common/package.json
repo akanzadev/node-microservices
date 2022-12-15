@@ -1,0 +1,22 @@
+{
+  "name": "@akatickets/common",
+  "version": "1.0.7",
+  "description": "",
+  "main": "./build/index.js",
+  "types": "./build/index.d.ts",
+  "files": [
+    "build/**/*"
+  ],
+  "scripts": {
+    "clean": "del /S /Q .\\build\\*",
+    "build": "npm run clean && tsc",
+    "pub": "git add . && git commit -m \"update\" && npm version patch && npm run build && npm publish"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "del-cli": "^5.0.0",
+    "typescript": "^4.9.4"
+  }
+}
